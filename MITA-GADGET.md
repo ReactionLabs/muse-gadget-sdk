@@ -27,10 +27,15 @@ behind the connector, same as any other MCP.
 2. Mita's face. Custom avatar through `components/muse/avatar`.
    The bundled avatar (Meta's Jollybot) is NOT covered by the Apache
    license, so it is prototype-only; the shipping face must be ours.
+   First hand-written renderer ("ember") is in place locally and
+   proven in the simulator. Per the SDK's house rules that directory
+   is gitignored and never committed; the official route to a
+   finished avatar is `tools/muse/avatar.py` once a board exists.
 3. MCP bridge (below), device mocked by the simulator until the
    board lands.
 4. Firmware build for `muse-waveshare-s3-175` when the board
-   arrives. Firmware builds need ESP-IDF v6.0.1 exactly.
+   arrives. Firmware builds need ESP-IDF v6.0.3 exactly (per
+   `esp32/AGENTS.md`) and the owner's SDK token in the build config.
 5. Pair with Dip's SDK token (gadgets.muse.ai) and have the first
    real conversation through it.
 
@@ -64,4 +69,4 @@ token; no token is ever committed to this repo.
 
 - Board order (Waveshare direct, $29.99, ships from China).
 - SDK token creation at gadgets.muse.ai (owner's Muse account).
-- ESP-IDF v6.0.1 install location for firmware builds (PC or box).
+- ESP-IDF v6.0.3 install location for firmware builds (PC or box).
